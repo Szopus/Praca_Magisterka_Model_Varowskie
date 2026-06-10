@@ -30,7 +30,7 @@ library(BVAR)
 # -------------------------------------------------------------
 # 1.1 Wczytanie danych i podział train/val/test
 # -------------------------------------------------------------
-data_raw <- read_excel("C:\\Users\\przem\\OneDrive\\Pulpit\\dane_mgr.xlsx")
+data_raw <- read_excel("data/dane_mgr.xlsx")
 data_raw$Data <- as.yearqtr(data_raw$Data, format = "%Y Q%q")
 ts_data <- ts(data_raw[, -1], start = c(2005, 1), frequency = 4)
 ts_data[ts_data == 0] <- NA
